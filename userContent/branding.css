@@ -21,10 +21,12 @@ img#jenkins-name-icon {
 }
 
 #header {
-  background-color: #00274c;
+  background-color: #9f9f9f;
 	height: 80px;
 }
 
-#header .logo {
-  margin-top: 16px;
+#header .searchbox,
+#header .login {
+  float: right;
+  padding: 25px 11px;
 }
