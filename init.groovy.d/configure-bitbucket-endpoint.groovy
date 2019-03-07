@@ -14,3 +14,4 @@ AbstractBitbucketEndpoint newEndpoint = new BitbucketServerEndpoint(
 
 newEndpoint.setCallCanMerge(false)
 bitbucketDescriptor.updateEndpoint((AbstractBitbucketEndpoint)newEndpoint)
+instance.save()
