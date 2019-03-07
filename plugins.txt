@@ -44,7 +44,6 @@ clover:latest
 cloverphp:latest
 command-launcher:latest
 configuration-as-code:latest
-configuration-as-code-secret-ssm:latest
 configuration-as-code-support:latest
 crap4j:latest
 credentials:latest
