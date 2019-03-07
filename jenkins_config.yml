@@ -50,7 +50,7 @@ jenkins:
     local:
       allowsSignup: false
       enableCaptcha: false
-credentials
+credentials:
   system:
     domainCredentials:
       - credentials:
