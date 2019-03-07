@@ -1,0 +1,93 @@
+jenkins:
+  authorizationStrategy:
+    # roleBased:
+    #   roles:
+    #     global:
+    #     - name: "Administrators"
+    #       description: "Jenkins Administrators"
+    #       permissions:
+    #       - "Overall/Administer"
+    #       assignments:
+    #         - "admin"
+    #     - name: "Read Only"
+    #       description: "Read-only Users"
+    #       permissions:
+    #       - "Overall/Read"
+    #       - "Job/Discover"
+    #       assignments:
+    #       - "anonymous"
+    #     agents:
+    #     - name: "Swarm Agents"
+    #       description: "Agents added using the Swarm plugin"
+    #       pattern: "build-*"
+    #       permissions:
+    #       - "Agent/Build"
+    #       - "Agent/Configure"
+    #       - "Agent/Connect"
+    #       - "Agent/Create"
+    #       - "Agent/Delete"
+    #       - "Agent/Disconnect"
+    #       assignments:
+    #       - "agent"
+    projectMatrix:
+      grantedPermissions:
+      - "Agent/Build:agent"
+      - "Agent/Configure:agent"
+      - "Agent/Connect:agent"
+      - "Agent/Create:agent"
+      - "Agent/Delete:agent"
+      - "Agent/Disconnect:agent"
+      - "Overall/Administer:admin"
+      - "Job/Discover:anonymous"
+      - "Overall/Read:anonymous"
+  disableRememberMe: false
+  labelString: "master"
+  mode: EXCLUSIVE
+  numExecutors: 0
+  securityRealm:
+    local:
+      allowsSignup: false
+      enableCaptcha: false
+# credentials:
+#   system:
+#     domainCredentials:
+#     - credentials:
+#       - usernamePassword:
+#           id: "-global-domain-credential"
+#           password: "{AQAAABAAAAAQTCfYT3V4zzcg5njhA9wG7VeEiQmgQIHXxWrvKO7j0as=}"
+#           scope: GLOBAL
+#       - string:
+#           id: "-global-domain-secret"
+#           scope: GLOBAL
+#           secret: "{AQAAABAAAAAQB684oNLk4V8AMzzblKVN6DagJPEkQwLA7S5B45KEudo=}"
+#     - credentials:
+#       - usernamePassword:
+#           id: "-github-domain-credential"
+#           password: "{AQAAABAAAAAQ+0T8Tp/0MwpmWGhN0Imq6nQp1Qhr+1BC3Ov73Qa5zUQ=}"
+#           scope: GLOBAL
+#       - string:
+#           id: "-github-domain-secret"
+#           scope: GLOBAL
+#           secret: "{AQAAABAAAAAQLA791PVdoUXmltDpWuqKn7eFcAY7kPeK8/CjhpUoRzw=}"
+#       domain:
+#         name: "github.com"
+# security:
+#   remotingCLI:
+#     enabled: false
+unclassified:
+  globalLibraries:
+    libraries:
+    - defaultVersion: "master"
+      implicit: true
+      name: "jenkins-pipeline-libraries"
+      retriever:
+        modernSCM:
+          scm:
+            git:
+              credentialsId: "-github-domain-credential"
+              id: "e2eaf2fc-974c-4883-b0f6-20b32cf7dbe8"
+              remote: "https://github.com/example/project-737.git"
+  simple-theme-plugin:
+    elements:
+    - cssUrl:
+        url: "/userContent/branding.css"
