@@ -44,8 +44,6 @@ jenkins:
   labelString: "master"
   mode: EXCLUSIVE
   numExecutors: 0
-  remotingSecurity:
-    enabled: true
   securityRealm:
     local:
       allowsSignup: false
@@ -58,7 +56,7 @@ credentials:
               scope: GLOBAL
               id: "my-bitbucket-creds"
               username: "some-user"
-              password: ${SomeUserPassword} #Load from Environment Variable
+              password: "some-password"
               description: "Username/Password Credentials for BitBucket"
 unclassified:
   simple-theme-plugin:
