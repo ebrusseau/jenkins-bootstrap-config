@@ -52,6 +52,7 @@ credentials:
   system:
     domainCredentials:
       - credentials:
+          - (( append ))
           - usernamePassword:
               scope: GLOBAL
               id: "my-bitbucket-creds"
