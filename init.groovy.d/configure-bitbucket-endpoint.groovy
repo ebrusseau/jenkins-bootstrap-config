@@ -6,10 +6,10 @@ bitbucketDescriptor = instance.getDescriptor("com.cloudbees.jenkins.plugins.bitb
 
 println "Setting BitBucket endpoint..."
 AbstractBitbucketEndpoint newEndpoint = new BitbucketServerEndpoint(
-  "My BitBucket",                     # Name
-  "https://mybitbucket.example.com",  # URL
-  false,                              # Manage Hooks (boolean)
-  "my-bitbucket-creds"                # Credentials ID (string)
+  "My BitBucket",                     // Name
+  "https://mybitbucket.example.com",  // URL
+  false,                              // Manage Hooks (boolean)
+  "my-bitbucket-creds"                // Credentials ID (string)
 )
 
 newEndpoint.setCallCanMerge(false)
